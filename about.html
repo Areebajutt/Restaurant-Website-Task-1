@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Gourmet Haven</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="animations.css">
+  <style>
+    .page-header {
+      padding-top: 150px;
+      padding-bottom: 5rem;
+      background-color: var(--color-bg-alt);
+      text-align: center;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-image {
+      flex: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      padding: 3rem 0;
+      border-radius: 12px;
+      margin-bottom: 5rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      margin-bottom: 0.5rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      box-shadow: var(--shadow-md);
+      border: 5px solid var(--color-bg-alt);
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        🍽️ Gourmet Haven
+      </a>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="animate-on-scroll slide-up">Our Story</h1>
+      <p class="animate-on-scroll slide-up delay-100">A journey of taste, passion, and culinary excellence.</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text animate-on-scroll slide-up">
+          <h2>The Gourmet Haven Journey</h2>
+          <p class="mb-1">Founded in 2010, Gourmet Haven started with a simple vision: to bring world-class dining experiences to our local community. What began as a small, family-run bistro has blossomed into a beloved culinary destination.</p>
+          <p>We believe that food is not just sustenance; it's an art form. Our mission is to source the finest, most sustainable ingredients and transform them into dishes that tell a story. Every plate that leaves our kitchen is a testament to our dedication to quality and creativity.</p>
+        </div>
+        <div class="about-image animate-on-scroll slide-up delay-200">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1920&h=1080" alt="Our Restaurant" style="filter: brightness(0.8);">
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-container animate-on-scroll slide-up">
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div>Years of Service</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50k+</div>
+          <div>Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">120+</div>
+          <div>Menu Items</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10</div>
+          <div>Award-Winning Chefs</div>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="section-title animate-on-scroll slide-up">
+        <h2>Meet Our Chefs</h2>
+        <p>The culinary masters behind the magic</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member animate-on-scroll slide-up delay-100">
+          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=400&h=400" alt="Chef Marco" class="team-img" style="object-position: center;">
+          <h3>Marco Rossi</h3>
+          <p class="color-text-light">Head Chef</p>
+        </div>
+        <div class="team-member animate-on-scroll slide-up delay-200">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=400&h=400" alt="Chef Elena" class="team-img" style="object-position: center;">
+          <h3>Elena Silva</h3>
+          <p class="color-text-light">Pastry Chef</p>
+        </div>
+        <div class="team-member animate-on-scroll slide-up delay-300">
+          <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&q=80&w=400&h=400" alt="Chef James" class="team-img" style="object-position: center;">
+          <h3>James Lin</h3>
+          <p class="color-text-light">Sous Chef</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gourmet Haven. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>

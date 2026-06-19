@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Gourmet Haven</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="animations.css">
+  <style>
+    .page-header {
+      padding-top: 150px;
+      padding-bottom: 5rem;
+      background-color: var(--color-bg-alt);
+      text-align: center;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-icon {
+      font-size: 1.5rem;
+    }
+
+    .contact-form-container {
+      padding: 2rem 0;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 4rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .error-msg {
+      color: red;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+    
+    .form-control.invalid {
+      border-color: red;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        🍽️ Gourmet Haven
+      </a>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="animate-on-scroll slide-up">Get in Touch</h1>
+      <p class="animate-on-scroll slide-up delay-100">We'd love to hear from you or help you book a table.</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-wrapper">
+        
+        <!-- Contact Information -->
+        <div class="contact-info animate-on-scroll slide-up">
+          <h2 style="color: white; margin-bottom: 2rem;">Contact Information</h2>
+          
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.2rem;">Our Location</h3>
+              <p style="color: #ffe0e0;">123 Culinary Lane,<br>Food City, FC 90210</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div>
+              <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.2rem;">Phone Number</h3>
+              <p style="color: #ffe0e0;">+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div>
+              <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.2rem;">Email Address</h3>
+              <p style="color: #ffe0e0;">hello@gourmethaven.com<br>reservations@gourmethaven.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container animate-on-scroll slide-up delay-100">
+          <h2>Send Us a Message</h2>
+          <p class="color-text-light mb-2">Fill out the form below and we will get back to you shortly.</p>
+          
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+              <div class="error-msg" id="nameError">Please enter your name.</div>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+              <div class="error-msg" id="emailError">Please enter a valid email address.</div>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+              <div class="error-msg" id="subjectError">Please enter a subject.</div>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" class="form-control" placeholder="Your Message" required></textarea>
+              <div class="error-msg" id="messageError">Please enter your message.</div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Google Map Placeholder -->
+      <div class="map-container animate-on-scroll slide-up">
+        <!-- Embedding a static map placeholder using iframe. Replace src with actual Google Maps embed link -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0673752101034!2d-122.40131498468205!3d37.794273279756114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858061bc46c6ab%3A0xc6da3c6d59b20b22!2sFerry%20Building!5e0!3m2!1sen!2sus!4v1614278453470!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gourmet Haven. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="animations.js"></script>
+  <script>
+    // Form Validation
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      let isValid = true;
+      const inputs = [
+        { id: 'name', type: 'text' },
+        { id: 'email', type: 'email' },
+        { id: 'subject', type: 'text' },
+        { id: 'message', type: 'text' }
+      ];
+
+      inputs.forEach(input => {
+        const el = document.getElementById(input.id);
+        const errorEl = document.getElementById(`${input.id}Error`);
+        
+        if (!el.value.trim()) {
+          el.classList.add('invalid');
+          errorEl.style.display = 'block';
+          isValid = false;
+        } else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) {
+          el.classList.add('invalid');
+          errorEl.style.display = 'block';
+          isValid = false;
+        } else {
+          el.classList.remove('invalid');
+          errorEl.style.display = 'none';
+        }
+      });
+
+      if (isValid) {
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>

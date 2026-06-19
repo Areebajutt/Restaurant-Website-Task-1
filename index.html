@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gourmet Haven | Fine Dining Restaurant</title>
+  <meta name="description" content="Experience the finest culinary delights at Gourmet Haven. We offer a mix of fast food, authentic pizzas, gourmet burgers, and sweet desserts.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="animations.css">
+  <style>
+    /* Home specific styles */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .feature-item {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--color-bg-alt);
+      border-radius: 12px;
+      transition: transform var(--transition-normal);
+    }
+    .feature-item:hover {
+      transform: translateY(-10px);
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+    
+    .dishes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .testimonial-card {
+      background-color: var(--color-bg-alt);
+      padding: 2rem;
+      border-radius: 12px;
+      font-style: italic;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 5rem;
+      color: var(--color-primary);
+      opacity: 0.2;
+      font-family: var(--font-heading);
+    }
+    .testimonial-author {
+      margin-top: 1.5rem;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        🍽️ Gourmet Haven
+      </a>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1920&h=1080" alt="Gourmet Food" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content animate-on-scroll slide-up">
+        <h1>Experience <span>Culinary</span> Excellence</h1>
+        <p>Discover a symphony of flavors crafted with passion. From sizzling gourmet burgers to authentic wood-fired pizzas.</p>
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn btn-primary pulse-hover">View Our Menu</a>
+          <a href="contact.html" class="btn btn-outline">Book a Table</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Dishes -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-title animate-on-scroll slide-up">
+        <h2>Featured Delights</h2>
+        <p>Hand-picked favorites from our chef's special menu</p>
+      </div>
+      
+      <div class="dishes-grid">
+        <!-- Card 1 -->
+        <div class="card animate-on-scroll slide-up delay-100">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=800&h=600" alt="Signature Burger" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">The Signature Burger</h3>
+            <p class="card-desc">Premium beef patty, melting cheddar, caramelized onions, and our secret sauce on a toasted brioche bun.</p>
+            <div class="card-footer">
+              <span class="card-price">$14.99</span>
+              <a href="menu.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Order</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card animate-on-scroll slide-up delay-200">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&q=80&w=800&h=600" alt="Rustic Wood-fired Pizza" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Rustic Margherita</h3>
+            <p class="card-desc">Authentic wood-fired crust, rich San Marzano tomato sauce, fresh mozzarella, and aromatic basil.</p>
+            <div class="card-footer">
+              <span class="card-price">$18.50</span>
+              <a href="menu.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Order</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card animate-on-scroll slide-up delay-300">
+          <img src="https://images.unsplash.com/photo-1624353365286-3f8ed62fa774?auto=format&fit=crop&q=80&w=800&h=600" alt="Chocolate Lava Cake" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Molten Lava Cake</h3>
+            <p class="card-desc">Decadent warm chocolate cake with a gooey center, served with premium vanilla bean ice cream.</p>
+            <div class="card-footer">
+              <span class="card-price">$8.99</span>
+              <a href="menu.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-title animate-on-scroll slide-up">
+        <h2>Why Choose Us</h2>
+        <p>What makes Gourmet Haven the perfect dining destination</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item animate-on-scroll slide-up delay-100">
+          <div class="feature-icon">🥗</div>
+          <h3>Fresh Ingredients</h3>
+          <p>We source only the freshest, high-quality local ingredients daily.</p>
+        </div>
+        <div class="feature-item animate-on-scroll slide-up delay-200">
+          <div class="feature-icon">👨‍🍳</div>
+          <h3>Master Chefs</h3>
+          <p>Our kitchen is led by award-winning chefs with decades of experience.</p>
+        </div>
+        <div class="feature-item animate-on-scroll slide-up delay-300">
+          <div class="feature-icon">🛵</div>
+          <h3>Fast Delivery</h3>
+          <p>Enjoy our gourmet meals in the comfort of your home, delivered hot and fast.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title animate-on-scroll slide-up">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from real food lovers</p>
+      </div>
+
+      <div class="dishes-grid">
+        <div class="testimonial-card animate-on-scroll slide-up delay-100">
+          <p>"Absolutely the best burger I have ever tasted! The atmosphere is fantastic, and the staff is incredibly welcoming. A must-visit!"</p>
+          <div class="testimonial-author">- Sarah Jenkins</div>
+        </div>
+        <div class="testimonial-card animate-on-scroll slide-up delay-200">
+          <p>"The wood-fired pizza transported me straight back to Italy. Perfect crust, amazing flavors. I will definitely be returning soon."</p>
+          <div class="testimonial-author">- Michael Chang</div>
+        </div>
+        <div class="testimonial-card animate-on-scroll slide-up delay-300">
+          <p>"We celebrated our anniversary here and it was magical. The molten lava cake was the perfect ending to a flawless meal."</p>
+          <div class="testimonial-author">- Emily & David</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid animate-on-scroll slide-up">
+        <div class="footer-col">
+          <h3>Gourmet Haven</h3>
+          <p>Experience the perfect blend of modern dining and classic culinary techniques. We promise an unforgettable gastronomic journey.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>📍 123 Culinary Lane, Food City, FC 90210</li>
+            <li>📞 +1 (555) 123-4567</li>
+            <li>✉️ hello@gourmethaven.com</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Opening Hours</h3>
+          <ul class="footer-links">
+            <li>Mon - Fri: 11:00 AM - 10:00 PM</li>
+            <li>Sat - Sun: 10:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom animate-on-scroll slide-up delay-100">
+        <p>&copy; 2026 Gourmet Haven. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>

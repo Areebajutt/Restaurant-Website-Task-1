@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Gourmet Haven</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="animations.css">
+  <style>
+    .page-header {
+      padding-top: 150px;
+      padding-bottom: 5rem;
+      background-color: var(--color-bg-alt);
+      text-align: center;
+    }
+    
+    .menu-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .search-bar {
+      width: 100%;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-main);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      font-weight: 500;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-color: var(--color-primary);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        🍽️ Gourmet Haven
+      </a>
+      
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="animate-on-scroll slide-up">Our Menu</h1>
+      <p class="animate-on-scroll slide-up delay-100">Explore our delicious range of culinary delights</p>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="section">
+    <div class="container">
+      
+      <div class="menu-controls animate-on-scroll slide-up">
+        <div class="search-bar">
+          <input type="text" id="menu-search" class="search-input" placeholder="Search for a dish...">
+        </div>
+        
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="burgers">Burgers</button>
+          <button class="filter-btn" data-filter="pizza">Pizza</button>
+          <button class="filter-btn" data-filter="desserts">Desserts</button>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Item 1 -->
+        <div class="card animate-on-scroll slide-up" data-category="burgers">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=800&h=600" alt="Signature Burger" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">The Signature Burger</h3>
+            <p class="card-desc">Premium beef patty, melting cheddar, caramelized onions, and our secret sauce.</p>
+            <div class="card-footer">
+              <span class="card-price">$14.99</span>
+              <button class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="card animate-on-scroll slide-up delay-100" data-category="pizza">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&q=80&w=800&h=600" alt="Rustic Margherita" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Rustic Margherita</h3>
+            <p class="card-desc">Wood-fired crust, San Marzano tomato sauce, fresh mozzarella, and basil.</p>
+            <div class="card-footer">
+              <span class="card-price">$18.50</span>
+              <button class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="card animate-on-scroll slide-up delay-200" data-category="desserts">
+          <img src="https://images.unsplash.com/photo-1624353365286-3f8ed62fa774?auto=format&fit=crop&q=80&w=800&h=600" alt="Molten Lava Cake" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Molten Lava Cake</h3>
+            <p class="card-desc">Warm chocolate cake with a gooey center, served with vanilla bean ice cream.</p>
+            <div class="card-footer">
+              <span class="card-price">$8.99</span>
+              <button class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="card animate-on-scroll slide-up" data-category="burgers">
+          <img src="https://images.unsplash.com/photo-1615719413546-198b25453f85?auto=format&fit=crop&q=80&w=400&h=300" alt="Spicy Chicken Burger" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Spicy Chicken Burger</h3>
+            <p class="card-desc">Crispy fried chicken breast, spicy mayo, pickles, and crisp lettuce.</p>
+            <div class="card-footer">
+              <span class="card-price">$12.99</span>
+              <button class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 5 -->
+        <div class="card animate-on-scroll slide-up delay-100" data-category="pizza">
+          <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&q=80&w=400&h=300" alt="Pepperoni Feast" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Pepperoni Feast</h3>
+            <p class="card-desc">Double pepperoni, rich tomato sauce, and heaps of melted mozzarella cheese.</p>
+            <div class="card-footer">
+              <span class="card-price">$19.99</span>
+              <button class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="card animate-on-scroll slide-up delay-200" data-category="desserts">
+          <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=400&h=300" alt="Cheesecake" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">New York Cheesecake</h3>
+            <p class="card-desc">Classic creamy cheesecake with a graham cracker crust and berry compote.</p>
+            <div class="card-footer">
+              <span class="card-price">$7.50</span>
+              <button class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gourmet Haven. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="menu.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>
